@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root{
+    --pink-light: hsla(340, 70%, 40%, 1);
+    --gray-dark: hsla(100, 10%, 10%, 0.6);
+    --josef-font:'Josefin Sans', sans-serif;
+}
+/*INITIAL LAYOUT*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.mg-b{
+    margin-block: 10rem 0;
+}
+img{
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: var(--josef-font);
+}
+
+
+/*Navigation Bar*/
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    position: sticky;
+}
+nav ul{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color:hsl(1.0, 1.0%, 1.0%)
+}
+nav ul li a:hover{
+    color: var(--pink-light);
+    transition: .1s;
+}
+.nav-btn{
+    background-color: var(--pink-light);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*First Section*/
+#section-1{
+    background-image: linear-gradient(hsla(100, 10%, 100%, 1), hsla(1, 10%, 100%, 0.8), hsla(100, 50%, 100%, 1)), url('../img/web.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+}
+.section-intro{
+    position: absolute;
+    top: 35%;
+}
+.img{
+    width: 41%;
+    transform: translateX(115%);
+}
+.section-intro h3{
+    font-size: 2rem;
+}
+.section-intro h2{
+    font-size: 3rem;
+    color: var(--pink-light);
+}
+.section-header h2 a{
+    font-size: 3rem;
+    color: hsla(100, 10%, 10%, 0.8);
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Second Section*/
+.second-section-div{
+    position: relative;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.second-left-container{
+    width: 65%;
+}
+.second-left-container h3{
+    margin-block-end: 2rem;
+    font-size: 3rem;
+}
+.second-left-container p{
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+}
+.second-right-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+}
+.section-card{
+    width: 80%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(70deg,var(--pink-light),white);
+    border-radius: 15px;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.card-info{
+    padding-left: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.card-img{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+   
+}
+.section-card:nth-of-type(1) .card-img{
+    background-image:  linear-gradient(hsla(100, 10%, 100%, 0.2), hsla(1, 10%, 100%, 0.1), hsla(100, 50%, 100%, 0.2)), url('../img/dota.png');
+    background-size: cover;
+}
+.section-card:nth-of-type(2) .card-img{
+    background-image:  linear-gradient(hsla(100, 10%, 100%, 0.2), hsla(1, 10%, 100%, 0.1), hsla(100, 50%, 100%, 0.2)), url('../img/ml.png');
+    background-size: cover;
+}
+
+.section-card:nth-of-type(3) .card-img{
+    background-image:  linear-gradient(hsla(100, 10%, 100%, 0.2), hsla(1, 10%, 100%, 0.1), hsla(100, 50%, 100%, 0.2)), url('../img/valo.png');
+    background-size: cover;
+}
+
+.card-img img{
+    height: 100%;
+}
+
+/*Third Section*/
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    
+}
+.school-card{
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 430px;
+}
+.school-img{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.school-img p{
+    position: absolute;
+    background-color: var(--pink-light);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    top: 5%;
+    left: 5%;
+}
+.school-info{
+    padding: 1rem;
+    text-align: center;
+}
+/*Footer*/
+
+#footer{
+    padding:20px;
+    display:flex;
+    box-sizing:border-box;
+    background-color: hsla(10,100%, 90%, 0.2);
+    color:var(--pink-light);
+    height:800px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    font-family:courier;
+    font-size: 30px;
+}
+#footer h2 a{
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+.social-icons a{
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#e6e3e3;
+    margin:50px 20px;
+    border-radius:35%;
+    text-decoration: none;
+}
+.social-icons{
+    display:flex;
+}
+.social-icons i{
+    color:#000000;
+}
+.social-icons a:hover,
+.a-social-b a:hover{
+    background-color:#000000;
+    box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+    transition:all ease 0.5s;
+}
+.social-icons a:hover i,
+.a-social-b a:hover i{
+    color:#FFFFFF;
+    transition:all ease 0.5s;
+}
+.a-social-b{
+    position:fixed;
+    top:50%;
+    right:0px;
+    transform:translateY(-50%);
+}
+.a-social-b a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    padding:0px;
+    margin:0px;
+    line-height:0px;
+    background-color:#FFFFFF;
+    border:1px solid #cbcbcb;
+    box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+}
+.a-social-b i{
+    color:#2b2b2b;
+    font-size:20px;
+}
